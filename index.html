@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<html>
+  <body>
+    <table id="data" class="darkTable">
+      <thead class="topic">
+        <tr>
+        <th>ID </th>
+        <th>CPU</th>
+        <th>Clock</th>
+        <th>cores</th>
+        <th>threads</th>
+        </tr>
+        </thead>
+    </table>
+    
+    <script>
+      const table = document.getElementById('data');
+    
+      fetch('http://localhost:3333/data')
+        .then(response => response.json())
+        .then(data => {
+          data.forEach(row => {
+            const tr = document.createElement('tr');
+    
+            for (const key in row) {
+              const td = document.createElement('td');
+              td.textContent = row[key];
+              tr.appendChild(td);
+            }
+    
+            table.appendChild(tr);
+          });
+        });
+    </script>
+    
+  </body>
+</html>

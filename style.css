@@ -1,0 +1,43 @@
+  
+table{
+    border: 2px solid;
+    border-radius: 300px;
+    background-color:5px #555555;
+    width: 500px;
+    text-align: center;
+    border-collapse: collapse;
+     }
+   tr {
+    border: 1px solid ;
+   }
+   th{
+    width: 150px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+   }
+  th{
+    padding: 11px 5px;
+  }
+  table,tr,td,tbody,thead{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  table,th,tr{
+    text-align: center;
+    font-size: 17px;
+    padding:5 5px;
+   }
+  th,td{
+    border-left: 1px solid #000000;
+   }
+   tr td:nth-child(2){
+    padding:3px;
+    width: 640px;
+   }
+  tr td:nth-child(3):after{
+    content: "Ghz";
+    text-align: right;
+    padding: 5px;
+   }
+  
+  
